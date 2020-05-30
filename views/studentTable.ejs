@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <style>
+.table table-hover{
+    background: #c4d3f6;
+}
+
+   </style>
+
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+     crossorigin="anonymous">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #c4d3f6;">
+    <div class="card bg-light mb-3" style="max-width: 100%;margin-top: 50px;">
+        
+        <div class="card-body">
+            <table class="table table-hover mb-4">
+                <thead>
+                  <tr style="background-color: #6c7ae0;">
+                    <th scope="col">Course Name</th>
+                    <th scope="col">Doctor Name</th>
+                    <th scope="col">Days</th>
+                    <th scope="col">Time</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row"><%=items[0].Course_name1%></th>
+                    <td ><a href="/table/hazimahmad"><%=items[0].D_name1%></a></td>
+                    <td><%=items[0].Day%>,<%=items[1].Day%>,<%=items[2].Day%></td>
+                    <td><%=items[0].Course_time1%></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><%=items[0].Course_name2%></th>
+                    <td ><a href="/table/mustafa"><%=items[0].D_name2%></a></td>
+                    <td><%=items[0].Day%>,<%=items[1].Day%>,<%=items[2].Day%></td>
+                    <td><%=items[0].Course_time2%></td>
+                  </tr>
+                  <tr>
+                    <th scope="row"><%=items[0].Course_name3%></th>
+                    <td ><%=items[0].D_name3%></td>
+                    <td><%=items[0].Day%>,<%=items[1].Day%>,<%=items[2].Day%></td>
+                    <td><%=items[0].Course_time3%></td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row"><%=items[3].Course_name1%></th>
+                    <td ><%=items[3].D_name1%></td>
+                    <td><%=items[3].Day%>,<%=items[4].Day%></td>
+                    <td><%=items[3].Course_time1%></td>
+                    
+                  </tr>
+                  <tr>
+                    <th scope="row"><%=items[4].Course_name2%></th>
+                    <td ><%=items[4].D_name2%></td>
+                    <td><%=items[3].Day%>,<%=items[4].Day%></td>
+                    <td><%=items[4].Course_time2%></td>
+                    
+                  </tr>
+
+                </tbody>
+              </table>
+           
+        </div>
+      </div>
+   
+</body>
+</html>
