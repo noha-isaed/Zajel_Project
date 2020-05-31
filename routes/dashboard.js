@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const tableRouter=require('./routes/doctortable')
-const calenderRouter=require('./routes/eventsInfo')
+const calenderRouter=require('./doctortable.js')
+const tableRouter=require('./doctortable.js')
 
 
-router.use(tableRouter)
+
 router.use('/events',calenderRouter)
-
+router.use(tableRouter)
 
 router.get('/timetable',function(req,res){
     var url ="mongodb://localhost:27017"
@@ -19,7 +19,7 @@ router.get('/timetable',function(req,res){
             res.render('studentTable',{items:items})
         })   
     });
-});
+})
 
 
 router.get("/calender", function (req, res) {

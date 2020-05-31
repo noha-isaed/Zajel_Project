@@ -42,7 +42,7 @@ router.get('/getEvent', function (req, res) {
             res.render("events/getevent", { data: items });
         });
     });
-});
+})
 
 
 

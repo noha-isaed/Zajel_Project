@@ -26,7 +26,7 @@ router.get('/mustafa',function(req,res){
         var dbo =client.db('mytable')
             dbo.collection("doctor2").find({}).toArray(function(err,doctor){
         
-                if(err) Console.log(err);
+                if(err) Console.log("");
                 res.render('/doctormustafa',{doctor:doctor});       
             });
         });
