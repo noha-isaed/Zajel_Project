@@ -1,0 +1,43 @@
+
+<%- include ('./partials/header') -%>
+<%- include ('./partials/navbar') -%>
+    <div class="container">
+<div class="wrapper fadeInDown cont" >
+    <div id="formContent">
+    <div class="row">
+        <h1 style="text-align: center">Log In</h1>
+        
+        <div style=" width: 50%; margin: 25px auto;"><hr>
+            <form action="/" method="post">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="username" placeholder="Registration Number" > 
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" name="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-primary btn-block">Log in</button>
+                </div><hr>
+            </form>
+            
+        </div>
+        <div class="text-center" id="formFooter">
+            <a  href="forgot"class="underlineHover">Forgot Password?</a>
+            <a  href="register"class="underlineHover">Create an Account!</a>
+          </div>
+          
+        
+    </div>
+</div>
+
+</div>
+</div>
+<%- include ('./partials/footer') -%>
+
+
+
+
+  <!--<div id="formFooter">
+          <label style="margin-right: 30%">  <a class="underlineHover" href="forgot" >forgot password</a></label>
+            <label style="margin-left: 30%"><a class="underlineHover" href="register" >sign up</a></label>
+          </div>-->
