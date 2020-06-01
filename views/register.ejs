@@ -1,0 +1,50 @@
+<%- include ('./partials/header') -%>
+<%- include ('./partials/navbar') -%>
+<div class="wrapper fadeInDown cont">
+    <div id="formContent">
+    <div class="row">
+        
+        <h1 style="text-align: center">Create an Account!
+        </h1>
+        <div style="width: 50%; margin: 25px auto;">
+            <hr>
+            <form  action="/register" method="post" >
+                <div class="form-group">       
+                    <input type="text" class="form-control" name="username"  required="required" placeholder="Registration Number">
+                </div>  
+               
+                <div class="form-group">
+                    <input type="text" name="email" id="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                </div>
+
+                <div class="form-group">
+                    <input type="password" name="confirm_password" id="confirm_password" class="form-control" placeholder="Confirm Password">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control" name="idnumber"  required="required" placeholder="Id Number">
+                </div>
+                <div class="form-group">       
+                        <input type="text" class="form-control" name="securityquestion"  required="required" placeholder="Security Question">
+                </div>   
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-lg btn-primary btn-block " style="font-size: 15px;">Register Account
+                        </button>
+                    </div>
+            </form>
+
+			
+		
+		</div>
+        <div class="text-center" id="formFooter">
+            <a  href="/"class="underlineHover">Already have an account? Login!</a>
+          </div>
+    
+</div>
+
+
+</div>
+</div>
+<%- include ('./partials/footer') -%>
