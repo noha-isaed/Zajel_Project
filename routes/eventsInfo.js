@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const Event = require('./../models/calendarSchema');
-
+var MongoClient = require('mongodb').MongoClient;
 
 router.get('/newevent', function (req, res) {
     res.render('events/newevent')
