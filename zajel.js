@@ -23,9 +23,9 @@ app.use(express.static("public"))
 //app.use('zajel',logRouter)
 app.use(dashRouter)
 
-app.get( "/" , function(req , res){
- res.render("dashboard");
-})
+app.get( "/dashboard" , function(req , res){
+    res.render("dashboard");
+   })
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
