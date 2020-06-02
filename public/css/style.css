@@ -4,9 +4,6 @@ html {
   min-height: 100%;
 }
 
-
-
-/*form*/
 .fadeInDown {
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
@@ -83,7 +80,6 @@ width: 100%;
 .container .text-muted {
   margin: 20px 0;
 }
-
 /* Thumbnail styles */
 .thumbnail img {
     width: 100%;
