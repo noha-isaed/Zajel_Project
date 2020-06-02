@@ -1,13 +1,14 @@
 
 <%- include ('./partials/header') -%>
 <%- include ('./partials/navbar') -%>
+ <div class="container"  style="margin-bottom:60px;">
     <div class="container">
 <div class="wrapper fadeInDown cont" >
-    <div id="formContent">
+    <div id="formContent" style="border: 1px solid #4e73df;">
     <div class="row">
         <h1 style="text-align: center">Log In</h1>
         
-        <div style=" width: 50%; margin: 25px auto;"><hr>
+        <div style=" width: 50%; margin: 40px auto;"><hr>
             <form action="/" method="post">
                 <div class="form-group">
                     <input class="form-control" type="text" name="username" placeholder="Registration Number" > 
@@ -16,12 +17,12 @@
                     <input class="form-control" type="password" name="password" placeholder="Password">
                 </div>
                 <div class="form-group">
-                    <button class="btn btn-lg btn-primary btn-block">Log in</button>
+                    <button class="btn btn-lg btn-primary btn-block"style="background-color:#4e73df;" >Log in</button>
                 </div><hr>
             </form>
             
         </div>
-        <div class="text-center" id="formFooter">
+        <div class="text-center" id="formFooter" style="margin: 29px auto;">
             <a  href="forgot"class="underlineHover">Forgot Password?</a>
             <a  href="register"class="underlineHover">Create an Account!</a>
           </div>
@@ -30,6 +31,7 @@
     </div>
 </div>
 
+</div>
 </div>
 </div>
 <%- include ('./partials/footer') -%>
