@@ -1,0 +1,112 @@
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+  justify-content: center;
+  width: 80%;
+  min-height: 100%;
+  padding: 20px;
+  margin-left: 10%;
+}
+
+#formContent {
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 60%;
+  position: relative;
+  padding: 0px;
+  -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+  text-align: center;
+}
+#formFooter {
+  width:100%;
+  
+  padding: 10px;
+  text-align: center;
+  -webkit-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
+}
+
+.underlineHover:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #4e73df;
+  content: "";
+  transition: width 0.2s;
+ margin-bottom: 3%;
+}
+
+.underlineHover:hover {
+  color: #0d0d0d;
+}
+
+.underlineHover:hover:after{
+  width: 100%;
+}
+
+.footer {
+ padding:0.5%;
+  left: 0;
+bottom: 0;
+width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 5%;
+  background-color: #4e73df;
+  position: fixed;
+}
+
+.container .text-muted {
+  margin: 20px 0;
+}
+/* Thumbnail styles */
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+/* Google Map styles */
+#map {
+	height: 400px;
+	width: 100%;
+}
+
+/* Campground show page delete button */
+.delete-form {
+	display: inline-block;
+}
+
+/* Flexbox grid fix */
+.flex-wrap {
+  display:flex;
+  flex-wrap: wrap;
+}
+
