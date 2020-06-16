@@ -1,9 +1,8 @@
 const express  = require("express")
 const app = express()
 const bodyparser  = require('body-parser')
+const calenderRouter= require('./routes/eventsinfo.js')
 
-//const logRouter=require('./routes/index.js')
-const dashRouter=require('./routes/dashboard.js')
 
 var passport    = require("passport"),
     LocalStrategy = require("passport-local"),
@@ -20,12 +19,9 @@ app.set('view engine' , 'ejs');
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(express.static("public"))
 
-//app.use('zajel',logRouter)
-app.use(dashRouter)
 
-app.get( "/" , function(req , res){
- res.render("dashboard");
-})
+
+
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
@@ -50,6 +46,43 @@ app.use(function(req, res, next){
 });
 
 app.use("/", indexRoutes);
+
+app.post('/SAVED', function (req, res) {
+    var url = "mongodb://localhost:27017";
+    // create a client to mongodb
+    // make client connect to mongo service
+    MongoClient.connect(url, function (err, client) {
+        var db = client.db('zajel');
+        // document to be inserted
+        var doc = {
+            date: req.body.date,
+            name: req.body.name,
+            Stime: req.body.Stime,
+            Etime: req.body.Etime,
+            tage: req.body.tage
+        };
+        // insert document to 'users' collection using insertOne
+        db.collection("calendar").insertOne(doc, function (err, res) {
+            if (err) console.log("Data is not inserted");
+        });
+    });
+    res.render("calender");
+})
+
+app.get('/getEvent', function (req, res) {
+    var url = "mongodb://localhost:27017";
+    // create a client to mongodb
+    var MongoClient = require('mongodb').MongoClient;
+    // make client connect to mongo service
+    MongoClient.connect(url, { useUnifiedTopology: true }, function (err, client) {
+        var db = client.db('zajel');
+        db.collection("calendar").find().toArray(function (err, items) {
+            if (err) Consle.log("")
+            res.render("getevent", { data: items });
+        });
+    });
+})
+
 
 app.listen (9999, function(){
     console.log('Server started in port 9999');

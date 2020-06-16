@@ -17,7 +17,7 @@ isAuthenticated = (req,res,next) => {
 //root route
 
 router.get("/index",isAuthenticated ,function(req, res){
-  res.render("zajel/index",{page: 'zajel'});
+  res.render("dashboard",{page: 'zajel'});
 });
 // show register form
 router.get("/register", function(req, res){

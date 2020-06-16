@@ -11,9 +11,10 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+  <link rel="stylesheet" type="text/css" href="css/index.css">
 
   <!-- Custom fonts for this template-->
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  
   <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
   <!-- Custom styles for this template-->
@@ -66,20 +67,20 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="events/calender.ejs">
+        <a class="nav-link" href="/calender">
           <i class="fa fa-calendar"></i>
           <span>Calendar</span></a>
       </li>
 
       <li class="nav-item">
-        <a class="nav-link" href="email/inbox.ejs">
+        <a class="nav-link" href="email/inbox">
           <i class="fa fa-inbox"></i>
           <span>Email</span></a>
       </li>
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="personal-info.ejs">
+        <a class="nav-link" href="/personal-info">
           <i class="fas fa-address-card"></i>
           <span>Personal Information</span></a>
       </li>
@@ -272,7 +273,7 @@
                   Activity Log
                 </a>
                 <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                <a class="dropdown-item" href="/" data-toggle="modal" data-target="#logoutModal">
                   <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>
@@ -327,7 +328,7 @@
                       <div class="h6 mb-0 font-weight-bold text-gray-800">Abed-Natsheh</div>
                     </div>
                     <div class="col-auto">
-                      <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
+                      <i class="material-icons fa-2x text-gray-300 mb-5" style="font-size: 50px;">&#xe80c;</i>
                     </div>
                   </div>
                 </div>
@@ -340,14 +341,14 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Tasks</div>
+                      <div class="text-s font-weight-bold text-info text-uppercase mb-1">GPA</div>
                       <div class="row no-gutters align-items-center">
                         <div class="col-auto">
-                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">50%</div>
+                          <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">3.75</div>
                         </div>
                         <div class="col">
                           <div class="progress progress-sm mr-2">
-                            <div class="progress-bar bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 85%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                           </div>
                         </div>
                       </div>
@@ -366,8 +367,8 @@
                 <div class="card-body">
                   <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                      <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">Pending Requests</div>
-                      <div class="h5 mb-0 font-weight-bold text-gray-800">18</div>
+                      <div class="text-s font-weight-bold text-warning text-uppercase mb-1">Classes this semmester</div>
+                      <div class="h5 mb-0 font-weight-bold text-gray-800">5</div>
                     </div>
                     <div class="col-auto">
                       <i class="fas fa-comments fa-2x text-gray-300"></i>
@@ -383,73 +384,103 @@
           <div class="row">
 
             <!-- Area Chart -->
-            <div class="col-xl-8 col-lg-7">
-              <div class="card shadow mb-4">
+            <div class="col-xl-7 col-lg-8 " >
+              <div class="card shadow mb-3">
                 <!-- Card Header - Dropdown -->
                 <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Earnings Overview</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
+                  <h6 class="m-0 font-weight-bold text-primary">Calendar</h6>
                 </div>
                 <!-- Card Body -->
                 <div class="card-body">
-                  <div class="chart-area">
-                    <canvas id="myAreaChart"></canvas>
+                  <div class="calendar-area">
+                    <div>
+                      <div class="month">
+                          <ul>
+                              <li>
+                                  August<br>
+                                  <span style="font-size:18px">2020</span>
+                              </li>
+                          </ul>
+                      </div>
+          
+          
+                      <ul class="weekdays">
+                          <li>Mon</li>
+                          <li>Tue</li>
+                          <li>Wed</li>
+                          <li>Thu</li>
+                          <li>Fri</li>
+                          <li>Sat</li>
+                          <li>Sun</li>
+                      </ul>
+                      <ul class="days">
+                          <% for(var i=1;i<32;i++){ %>
+                          <li><a href="/newevent" class="btn btn-primary"><%=i%></a> </li>
+                          <%}%>
+                              </ul>
+                          </div>
+                  </div>
                   </div>
                 </div>
               </div>
-            </div>
+            
 
             <!-- Pie Chart -->
-            <div class="col-xl-4 col-lg-5">
+            <div class="col-xl-5 col-lg-4 mt-0">
               <div class="card shadow mb-4">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary">Revenue Sources</h6>
-                  <div class="dropdown no-arrow">
-                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in" aria-labelledby="dropdownMenuLink">
-                      <div class="dropdown-header">Dropdown Header:</div>
-                      <a class="dropdown-item" href="#">Action</a>
-                      <a class="dropdown-item" href="#">Another action</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Something else here</a>
-                    </div>
-                  </div>
+                <div class="card-header ">
+                  <a class="m-0 font-weight-bold text-primary">Absence table</a>
                 </div>
-                <!-- Card Body -->
-                <div class="card-body">
-                  <div class="chart-pie pt-4 pb-2">
-                    <canvas id="myPieChart"></canvas>
-                  </div>
-                  <div class="mt-4 text-center small">
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-primary"></i> Direct
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-success"></i> Social
-                    </span>
-                    <span class="mr-2">
-                      <i class="fas fa-circle text-info"></i> Referral
-                    </span>
-                  </div>
+                <div class="card-body mx-auto">
+                  
+                  <table class="table">
+                    <thead class="thead-light">
+                      <tr>
+                        <th class="text-xs   text-uppercase mb-1" scope="col">Course Name</th>
+                        <th class="text-xs   text-uppercase mb-1" scope="col">Absences Number</th>
+                        <th class="text-xs   text-uppercase mb-1" scope="col"> Reasonal Abcense</th>
+                        <th class="text-xs   text-uppercase mb-1" scope="col">Deprevation</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th class="text-xs text-uppercase mb-1" scope="row">Algorithm</th>
+                        <td>12/6</td>
+                        <td>5/6</td>
+                        <td style="color: red;">YES</td>
+                      </tr>
+                      <tr>
+                        <th class="text-xs text-uppercase mb-1" scope="row">Operating System</th>
+                        <td>0/6</td>
+                        <td>0/6</td>
+                        <td style="color: green;">NO</td>
+                      </tr>
+                      <tr>
+                        <th class="text-xs text-uppercase mb-1" scope="row">Database</th>
+                        <td>3/6</td>
+                        <td>6/6</td>
+                        <td style="color: green;"> NO</td>
+                      </tr>
+                      <tr>
+                        <th class="text-xs text-uppercase mb-1" scope="row">Team Project2</th>
+                        <td>6/6</td>
+                        <td>10/6</td>
+                        <td style="color: red;">YES</td>
+                      </tr>
+                      <tr>
+                        <th class="text-xs text-uppercase mb-1" scope="row">Software Enginering</th>
+                        <td>8/6</td>
+                        <td>7/6</td>
+                        <td style="color: green;">YES</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  
+                  
                 </div>
               </div>
-            </div>
           </div>
-
+        </div>
           <!-- Content Row -->
           <div class="row">
 
@@ -459,28 +490,28 @@
               <!-- Project Card Example -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Projects</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Courses Grades</h6>
                 </div>
                 <div class="card-body">
-                  <h4 class="small font-weight-bold">Server Migration <span class="float-right">20%</span></h4>
+                  <h4 class="small font-weight-bold">Algorithms <span class="float-right">55%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 55%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <h4 class="small font-weight-bold">Sales Tracking <span class="float-right">40%</span></h4>
+                  <h4 class="small font-weight-bold">Operating System <span class="float-right">67%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar bg-warning" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 67%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <h4 class="small font-weight-bold">Customer Database <span class="float-right">60%</span></h4>
+                  <h4 class="small font-weight-bold"> Database <span class="float-right">82%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 82%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <h4 class="small font-weight-bold">Payout Details <span class="float-right">80%</span></h4>
+                  <h4 class="small font-weight-bold">Team project 2 <span class="float-right">75%</span></h4>
                   <div class="progress mb-4">
-                    <div class="progress-bar bg-info" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" style="width: 75%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
-                  <h4 class="small font-weight-bold">Account Setup <span class="float-right">Complete!</span></h4>
+                  <h4 class="small font-weight-bold">Software Enginering <span class="float-right">95%</span></h4>
                   <div class="progress">
-                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 95%" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
                   </div>
                 </div>
               </div>
@@ -488,81 +519,101 @@
               <!-- Color System -->
               <div class="row">
                 <div class="col-lg-6 mb-4">
-                  <div class="card bg-primary text-white shadow">
+                  <div class="card bg-success text-white shadow">
                     <div class="card-body">
-                      Primary
-                      <div class="text-white-50 small">#4e73df</div>
+                      Excelent
+                      <div class="text-white-50 small">88-99: <br> A , A-</div>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-6 mb-4">
-                  <div class="card bg-success text-white shadow">
+                  <div class="card bg-primary text-white shadow">
                     <div class="card-body">
-                      Success
-                      <div class="text-white-50 small">#1cc88a</div>
+                      Very Good
+                      <div class="text-white-50 small">80-88: <br>B , B+</div>
                     </div>
                   </div>
                 </div>
+              
+              
+                
                 <div class="col-lg-6 mb-4">
                   <div class="card bg-info text-white shadow">
                     <div class="card-body">
-                      Info
-                      <div class="text-white-50 small">#36b9cc</div>
+                     Good
+                      <div class="text-white-50 small">70-79: <br> C , C+</div>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-6 mb-4">
                   <div class="card bg-warning text-white shadow">
                     <div class="card-body">
-                      Warning
-                      <div class="text-white-50 small">#f6c23e</div>
+                      Acceptable
+                      <div class="text-white-50 small">60-69:<br> D , D+</div>
                     </div>
                   </div>
                 </div>
                 <div class="col-lg-6 mb-4">
                   <div class="card bg-danger text-white shadow">
                     <div class="card-body">
-                      Danger
-                      <div class="text-white-50 small">#e74a3b</div>
+                     Failure
+                      <div class="text-white-50 small">0-59: <br> E , D-</div>
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-6 mb-4">
-                  <div class="card bg-secondary text-white shadow">
-                    <div class="card-body">
-                      Secondary
-                      <div class="text-white-50 small">#858796</div>
-                    </div>
-                  </div>
-                </div>
+                
               </div>
 
             </div>
 
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-6 mb-2 ">
 
               <!-- Illustrations -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Illustrations</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Quick Links</h6>
                 </div>
-                <div class="card-body">
-                  <div class="text-center">
-                    <img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;" src="img/undraw_posting_photo.svg" alt="">
-                  </div>
-                  <p>Add some quality, svg illustrations to your project courtesy of <a target="_blank" rel="nofollow" href="https://undraw.co/">unDraw</a>, a constantly updated collection of beautiful svg images that you can use completely free and without attribution!</p>
-                  <a target="_blank" rel="nofollow" href="https://undraw.co/">Browse Illustrations on unDraw &rarr;</a>
-                </div>
+                <div class="card-body" >
+                
+                  <ul  >
+                    <li >
+                      <a target="_blank" href="https://www.najah.edu/en/" class="btn btn-outline-dark" style="width: 50%;"> AL-Najah</a>  (Al-Najah National University Site)</li>
+                      
+                      <br>
+                    <li>
+                      
+                       <a target="_blank" href="https://moodle.najah.edu/" class="btn btn-outline-warning" style="width: 50%;">Moodle</a> (E-learning Site) </li>
+                       
+                  </ul>
+  </div>
               </div>
 
               <!-- Approach -->
               <div class="card shadow mb-4">
                 <div class="card-header py-3">
-                  <h6 class="m-0 font-weight-bold text-primary">Development Approach</h6>
+                  <h6 class="m-0 font-weight-bold text-primary">Semesters under warning</h6>
                 </div>
                 <div class="card-body">
-                  <p>SB Admin 2 makes extensive use of Bootstrap 4 utility classes in order to reduce CSS bloat and poor page performance. Custom CSS classes are used to create custom components and custom utility classes.</p>
-                  <p class="mb-0">Before working with this theme, you should become familiar with the Bootstrap framework, especially the utility classes.</p>
+                  <table class="table">
+                    <thead class="thead-light">
+                      <tr>
+                        <th class="text-xs   text-uppercase mb-1" scope="col">Semester</th>
+                        <th class="text-xs   text-uppercase mb-1" scope="col">GPA</th>
+                        <th class="text-xs   text-uppercase mb-1" scope="col"> Completed hours</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th class="text-xs text-uppercase mb-1" scope="row"> second Semester 2019/2020 </th>
+                        <td>1.3</td>
+                        <td>6</td>
+                        
+                      </tr>
+                     
+                      
+                    </tbody>
+                  </table>
                 </div>
               </div>
 
@@ -609,7 +660,7 @@
         <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
         <div class="modal-footer">
           <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-          <a class="btn btn-primary" href="login.html">Logout</a>
+          <a class="btn btn-primary" href="/">Logout</a>
         </div>
       </div>
     </div>

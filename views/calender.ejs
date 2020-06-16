@@ -1,29 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-   <style>
-.table table-hover{
-    background: #c4d3f6;
-}
-
-   </style>
-
-    <meta charset="UTF-8">
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-       crossorigin="anonymous">
-       <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-     crossorigin="anonymous">
-
+  <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+  <!-- Custom fonts for this template-->
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template-->
+  <link href="css/sb-admin-2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+     crossorigin="anonymous">
+     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="css/stylesCalender.css">
 </head>
-<body >
- 
+<body>
   <!-- Page Wrapper -->
   <div id="wrapper">
 
@@ -64,7 +66,7 @@
 
       <!-- Nav Item - Charts -->
       <li class="nav-item">
-        <a class="nav-link" href="/calender">
+        <a class="nav-link"  href="calender">
           <i class="fa fa-calendar"></i>
           <span>Calendar</span></a>
       </li>
@@ -77,7 +79,7 @@
 
       <!-- Nav Item - Tables -->
       <li class="nav-item">
-        <a class="nav-link" href="/personal-info">
+        <a class="nav-link" href="personal-info.ejs">
           <i class="fas fa-address-card"></i>
           <span>Personal Information</span></a>
       </li>
@@ -91,37 +93,23 @@
       </div>
 
     </ul>
+    
     <!-- End of Sidebar -->
-
-    <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
-
       <!-- Main Content -->
       <div id="content">
-
         <!-- Topbar -->
         <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-
           <!-- Sidebar Toggle (Topbar) -->
-          <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+          <button id="sidebarToggleTop" class="BTN BTN-link d-md-none rounded-circle mr-3">
             <i class="fa fa-bars"></i>
           </button>
-
-          <!-- Topbar Search -->
-          <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-            <div class="input-group">
-              <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
-              <div class="input-group-append">
-                <button class="btn btn-primary" type="button">
-                  <i class="fas fa-search fa-sm"></i>
-                </button>
-              </div>
+            <!-- Page Heading -->
+            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+              <h1 class="h3 mb-0 text-gray-800" style="margin-top: 20px;">Calendar</h1>
             </div>
-          </form>
-
           <!-- Topbar Navbar -->
           <ul class="navbar-nav ml-auto">
-
             <!-- Nav Item - Search Dropdown (Visible Only XS) -->
             <li class="nav-item dropdown no-arrow d-sm-none">
               <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -133,7 +121,7 @@
                   <div class="input-group">
                     <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
                     <div class="input-group-append">
-                      <button class="btn btn-primary" type="button">
+                      <button class="BTN BTN-primary" type="button">
                         <i class="fas fa-search fa-sm"></i>
                       </button>
                     </div>
@@ -141,7 +129,6 @@
                 </form>
               </div>
             </li>
-
             <!-- Nav Item - Alerts -->
             <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -190,7 +177,6 @@
                 <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
               </div>
             </li>
-
             <!-- Nav Item - Messages -->
             <li class="nav-item dropdown no-arrow mx-1">
               <a class="nav-link dropdown-toggle" href="#" id="messagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -209,7 +195,7 @@
                     <div class="status-indicator bg-success"></div>
                   </div>
                   <div class="font-weight-bold">
-                    <div class="text-truncate">Hi there! I am wondering if you can help me with a problem I've been having.</div>
+                    <div class="text-truncate">Hi doctor! I am wondering if you can help me with a problem I've been having.</div>
                     <div class="small text-gray-500">Emily Fowler · 58m</div>
                   </div>
                 </a>
@@ -246,9 +232,7 @@
                 <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
               </div>
             </li>
-
             <div class="topbar-divider d-none d-sm-block"></div>
-
             <!-- Nav Item - User Information -->
             <li class="nav-item dropdown no-arrow">
               <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -276,216 +260,130 @@
                 </a>
               </div>
             </li>
-
           </ul>
-
         </nav>
         <!-- End of Topbar -->
+        
+<div  id="contaner1">
+  <div class =" right">
+<div class="month" id="month">    
+  <a href="newevent" id="add1">Add Event</a>  
+  <ul>
+    <li class="prev">&#10094;</li>
+    <li class="next">&#10095;</li>
+    <li>
+      August </h1><br>
+      <span style="font-size:18px">2020</span>
+    </li>
+  </ul>
+</div>
 
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
+<ul id="weekdays">
+  <li><h4>Mo</h4></li>
+  <li><h4>Tu</h4></li>
+  <li><h4>We</h4></li>
+  <li><h4>Th</h4></li>
+  <li><h4>Fr</h4></li>
+  <li><h4>Sa</h4></li>
+  <li><h4>Su</h4></li>
+</ul>
 
-          <!-- Page Heading -->
-          <div class="d-sm-flex align-items-center justify-content-between mb-4">
-            <h1 class="h3 mb-0 text-gray-800">Timetable</h1>
-            <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
-          </div>
-
-          <!-- Content Row -->
-          <div class="row">
-            <div class="col-xl-12 col-lg-8 " >
-              <div class="card shadow mb-3">
-                <!-- Card Header - Dropdown -->
-                <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                  <h6 class="m-0 font-weight-bold text-primary"></h6>
-                </div>
-                <div class="card-body">
-                  <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Sunday</th>
-                            <th>Monday</th>
-                            <th>Tuesday</th>
-                            <th>Wednesday</th>
-                            <th>Thursday</th>
-                            <th>Satrday</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="width: 100%;">
-                            <td>8:00-9:00</td>
-                            <td  style="width: 20%;">
-                              <div class="card bg-success text-white shadow" style="width: 100%; margin-left: -10px; height: 110%;">
-                                <div class="card-body">
-                                  Algorithm
-                                  <div class="text-white-50 small">Mustafa</div>
-                                </div>
-                              </div>
-                            </td>
-                            
-                            <td>
-                              <div class="card bg-danger text-white shadow" style="width: 100%; margin-left: -10px; height: 110%;">
-                                <div class="card-body">
-                                  Operating System
-                                  <div class="text-white-50 small">Mustafa</div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="card bg-success text-white shadow" style="width: 100%; margin-left: -10px; height: 110%;">
-                                <div class="card-body">
-                                  Algorithm
-                                  <div class="text-white-50 small">Mustafa</div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="card bg-danger text-white shadow" style="width: 100%; margin-left: -10px; height: 150%;">
-                                <div class="card-body">
-                                  Operating System
-                                  <div class="text-white-50 small">Mustafa</div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>
-                              <div class="card bg-success text-white shadow" style="width: 120%; margin-left: -10px; height: 110%;">
-                                <div class="card-body">
-                                  Algorithm
-                                  <div class="text-white-50 small">Mustafa</div>
-                                </div>
-                              </div>
-                            </td>
-
-
-                        </tr>
-                        <tr>
-                            <td>9:00-10:00</td>
-                            
-                        </tr>
-                        <tr>
-                            <td>10:00-11:00</td>
-                            <td><div class="card bg-primary text-white shadow" style="width: 100%; margin-left: -10px; height: 110%;">
-                              <div class="card-body">
-                                Software Enginering
-                                <div class="text-white-50 small">Hazim Mustafa</div>
-                              </div>
-                            </div>
-                          </td>
-
-                          <td><br></td>
-                          <td>
-                            <div class="card bg-primary text-white shadow" style="width: 120%; margin-left: -10px; height: 110%;">
-                              <div class="card-body">
-                                Software Enginering
-                                <div class="text-white-50 small">Hazim Mustafa</div>
-                              </div>
-                            </div>
-                          </td>
-                          <td><br></td>
-                          <td>
-                            <div class="card bg-primary text-white shadow" style="width: 120%; margin-left: -10px; height: 110%;">
-                              <div class="card-body">
-                                Software Enginering
-                                <div class="text-white-50 small">Hazim Mustafa</div>
-                              </div>
-                            </div>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>11:00-12:00</td>
-                          <td>
-                            <div class="card bg-info text-white shadow" style="width: 100%; margin-left: -10px; height: 110%;">
-                            <div class="card-body">
-                              DataBase
-                              <div class="text-white-50 small">Suhad Draghmeh</div>
-                            </div>
-                          </div>
-                        </td>
-
-                        <td><div class="card bg-warning text-white shadow">
-                          <div class="card-body">
-                            Team Project2
-                            <div class="text-white-50 small">Abed AL-Natsheh</div>
-                          </div>
-                        </div></td>
-
-                        <td>
-                          <div class="card bg-info text-white shadow" style="width: 100%; margin-left: -10px; height: 110%;">
-                          <div class="card-body">
-                            DataBase
-                            <div class="text-white-50 small">Suhad Draghmeh</div>
-                          </div>
-                        </div>
-                      </td>
-                      <td><div class="card bg-warning text-white shadow">
-                        <div class="card-body">
-                          Team Project2
-                          <div class="text-white-50 small">Abed AL-Natsheh</div>
-                        </div>
-                      </div></td>
-                      <td>
-                        <div class="card bg-info text-white shadow" style="width: 120%; margin-left: -10px; height: 110%;">
-                        <div class="card-body">
-                          DataBase
-                          <div class="text-white-50 small">Suhad Draghmeh</div>
-                        </div>
-                      </div>
-                    </td>
-                        </tr>
-                        <tr>
-                          <td>12:00-1:00</td>
-
-                        </tr>
-                        <tr>
-                          <td>1:00-2:00</td>
-
-                        </tr>
-                        <tr>
-                          <td>2:00-3:00</td>
-
-                        </tr>
-                        <tr>
-                          <td>3:00-4:00</td>
-
-                        </tr>
-                        <tr>
-                          <td>4:00-5:00</td>
-
-                        </tr>
-                    </tbody>
-                </table>
-
-                </div>
-
-              </div>
-            </div>
-            
-
-          </div>
-
-              
-
-
-            </div>
-          </div>
-
-        </div>
-        <!-- /.container-fluid -->
-
-      </div>
-      <!-- End of Main Content -->
-
-      <!-- Footer -->
-     
-      <!-- End of Footer -->
-
-  
-  <!-- End of Page Wrapper -->
-
-  <!-- Scroll to Top Button-->
-  
-
-  
+<ul id="days"> 
+  <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >1</button>
+  </form></li> 
+  <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >2</button>
+  </form></li> 
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >3</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >4</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >5</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >6</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >7</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >8</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >9</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" ><div class="active">10</div></button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >11</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >12</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >13</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >14</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >15</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >16</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >17</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >18</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >19</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >20</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >21</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >22</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >23</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >24</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >25</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >26</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >27</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >28</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >29</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >30</button>
+  </form></li>
+   <li><form action="/getEvent" method="get">
+    <button type="submit"  class="BTN" >31</button>
+  </form></li>
+</ul>
+</div>
+</div>
 </body>
 </html>

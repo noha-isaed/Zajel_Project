@@ -20,6 +20,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
   
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" 
+    rel="stylesheet" 
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+     crossorigin="anonymous">
+   <link rel="stylesheet" href="css/styles.css">
   
     <!-- Custom fonts for this template-->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -282,15 +287,45 @@
           <!-- End of Topbar -->
   
           <!-- Begin Page Content -->
-          <div class="container-fluid">
-  
+
+          <table class="table">
+            <thead class="thead-dark">
+        <tr>
+          <th>Type</th>
+          <th>Info</th> 
+        </tr>
+        <tr>
+<% var i = info.length; %>
+          <tr>
+          <td>Full Name</td>
+          <td><%=info[i].name %></td>
+        </tr>
+
+        <tr>
+          <td>ID Number</td>
+          <td><%=info[i].Id_Number %></td>
+        </tr>
         
-</div>
-    <div class="container">
-        <form action="/saved" method="post">
-         <%- include('_form_field') %>
-     </form>
-     </div>
-    </div>
+        <tr>
+          <td>If you have Jordanian national number</td>
+          <td><%=info[i].Jordan_Nationality_Number %></td>
+        </tr>
+
+        <tr>
+          <td>City</td>
+          <td><%=info[i].city %></td>
+        </tr>
+
+        <tr>
+          <td>City / village / camp</td>
+          <td><%=info[i].city_Village_Camp %></td>
+        </tr>
+
+        <tr>
+          <td>Street</td>
+          <td><%=info[i].Street %></td>
+        </tr>
+      </thead>
+      </table>
 </body>
 </html>
