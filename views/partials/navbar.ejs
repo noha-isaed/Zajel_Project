@@ -1,37 +1,39 @@
 <nav class="navbar navbar-default " style="background-color: white;">
-    <div class="container">
-        <div class="navbar-header">
-          <% if(!user){ %>
-			
-            <a class="navbar-brand" href="/">اخبار الجامعة</a>
-            <a class="navbar-brand" href="/">| البريد الالكتروني</a>
-            <% }  %>
-                 
-        </div>
-        <div id="navbar" class=" navbar-collapse">
-          <% if(user){ %>
-          <ul class="nav navbar-nav">
-            <li><a href="index">Home</a></li>
-          </ul>
-          <% } %>
-          <ul class="nav navbar-nav navbar-right">
-              <% if(!user){ %>
-                <a class="navbar-brand" href="/">Zajel- An Najah National University
+  <div class="container">
+      <div class="navbar-header">
+        <% if(!user){ %>
+    
+          <a class="navbar-brand" href="https://www.najah.edu/ar/news/">اخبار الجامعة</a>
+          <a class="navbar-brand" href="https://mail.najah.edu/">| البريد الالكتروني</a>
+          <% }  %>
+            
+          
+      </div>
+      <div id="navbar" class=" navbar-collapse">
+        <% if(user){ %>
+        <ul class="nav navbar-nav">
+          <li><a href="index">Home</a></li>
+        </ul>
+        <% } %>
+        <ul class="nav navbar-nav navbar-right">
+            <% if(!user){ %>
+              <a class="navbar-brand" href="/">Zajel- An Najah National University
 
-                </a>
-              <% } else { %>
-                  <li><a href="#">Signed In As <%= user.username %></a></li>
-                  <li><a href="/logout">Logout</a></li>
-                  <li><a href="/forgot">Reset</a></li>
-              <% } %>
-              
-          </ul>
-        </div>
-    </div>
+              </a>
+            <% } else { %>
+                <li><a href="#">Signed In As <%= user.username %></a></li>
+                <li><a href="/logout">Logout</a></li>
+                <li><a href="/forgot">Reset</a></li>
+            <% } %>
+            
+        </ul>
+      </div>
+  </div>
 </nav>
 
 
 <% if(!user){ %>
+<<<<<<< HEAD
 <nav class="navbar navbar-expand-md navbar-default" style="margin-top:-21px;  background-color: #3969ac;color: white; ">
   <div class="container">
     <div class="navbar-header">
@@ -46,14 +48,29 @@
     </div>
 </nav>
   <% }  %>
+=======
+<nav class="navbar navbar-expand-md navbar-default" style="margin-top:-21px;  background-color:#4e73df
+>>>>>>> 0e5a2df8dab7acc9b30c9b93fb3b8e98d1c29e24
 
-  <div class="container" >
-    <% if(error && error.length > 0) { %>
-      <div class="alert alert-danger"style="background-color: #b9f8bf;color:red;" ><p><%=error %></p></div>
-    <% } %>
-    
-    <% if(success && success.length > 0) { %>
-      <div class="alert alert-success"><p><%= success %></p></div>
-    <% } %>
- </div>
+;color: black; ">
 <div class="container">
+  <div class="navbar-header">
+
+<ul class="nav navbar-nav navbar-left">
+    <li> <a class="navbar-brand" href="/" style="color: white;">زاجل - البرنامج الأكاديمي لجامعة النجاح الوطنية</a></li> 
+ 
+</ul> 
+  </div>
+  </div>
+</nav>
+<% }  %>
+
+<div class="container" >
+  <% if(error && error.length > 0) { %>
+    <div class="alert alert-danger"style="background-color: #b9f8bf;color:red;" ><p><%=error %></p></div>
+  <% } %>
+  
+  <% if(success && success.length > 0) { %>
+    <div class="alert alert-success"><p><%= success %></p></div>
+  <% } %>
+</div>

@@ -20,8 +20,14 @@ app.use(bodyparser.urlencoded({extended:true}));
 app.use(express.static("public"))
 
 
+<<<<<<< HEAD
 
 
+=======
+app.get( "/dashboard" , function(req , res){
+    res.render("dashboard");
+   })
+>>>>>>> 0e5a2df8dab7acc9b30c9b93fb3b8e98d1c29e24
 
 // PASSPORT CONFIGURATION
 app.use(require("express-session")({
